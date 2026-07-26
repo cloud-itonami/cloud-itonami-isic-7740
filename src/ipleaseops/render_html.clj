@@ -13,7 +13,8 @@
   ids and ops, calling the OperationActor graph directly (rather than via
   `sim/-main`, which only prints to stdout) so the resulting store state
   can be rendered as HTML."
-  (:require [clojure.string :as str]
+  (:require [jp-go-dds.skin]
+            [clojure.string :as str]
             [ipleaseops.store :as store]
             [ipleaseops.operation :as op]
             [ipleaseops.phase :as phase]
@@ -178,7 +179,9 @@ code { font-size: 12px; background: #f4f4f4; padding: 1px 4px; border-radius: 3p
 (defn render [db]
   (str "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n"
        "<title>ipleaseops.render-html -- IP Leasing Operations Coordinator console</title>\n"
-       "<style>\n" css "\n</style>\n</head>\n<body>\n"
+       "<style>"
+   (jp-go-dds.skin/dds+skin)
+   "</style>\n</head>\n<body>\n"
        "<header class=\"bar\"><h1>IP Leasing Operations Coordinator -- Operator Console</h1>"
        "<span class=\"badge\">ISIC 7740 &middot; phase " (esc phase/default-phase) "</span></header>\n<main>\n"
 
