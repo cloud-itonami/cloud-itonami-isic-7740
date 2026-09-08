@@ -14,7 +14,7 @@
   `sim/-main`, which only prints to stdout) so the resulting store state
   can be rendered as HTML."
   (:require [jp-go-dds.skin]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [ipleaseops.store :as store]
             [ipleaseops.operation :as op]
             [ipleaseops.phase :as phase]
