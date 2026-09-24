@@ -1,6 +1,6 @@
 (ns ipleaseops.phase-test
   "Unit tests of `ipleaseops.phase` rollout logic."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [ipleaseops.phase :as phase]))
 
 (def clean-verdict {:hard? false :escalate? false})

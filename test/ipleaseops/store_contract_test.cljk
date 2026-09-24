@@ -1,6 +1,6 @@
 (ns ipleaseops.store-contract-test
   "Contract tests for `ipleaseops.store/Store` protocol."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [ipleaseops.store :as store]))
 
 (deftest mem-store-license-lookup
